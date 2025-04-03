@@ -1,0 +1,180 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 215 92% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 200 98% 39%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 190 95% 39%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 84% 48%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 215 92% 58%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 200 98% 39%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 190 95% 39%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 212 100% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Syntax highlighting for code blocks */
+.code-block {
+  @apply bg-muted p-4 rounded-md overflow-x-auto my-4 text-sm font-mono;
+}
+
+.code-block pre {
+  @apply m-0;
+}
+
+.code-line {
+  @apply block;
+}
+
+/* Flow animation for the pipeline visualization */
+.flow-line {
+  @apply stroke-primary stroke-2;
+  stroke-dasharray: 5;
+  animation: flow 1.5s linear infinite;
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -10;
+  }
+}
+
+/* Arrow animation */
+@keyframes flowArrow {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  81% {
+    transform: translateX(80%);
+    opacity: 0;
+  }
+  82% {
+    transform: translateX(-80%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-flow-arrow {
+  animation: flowArrow 3s ease-in-out infinite;
+}
+
+/* Modal animation */
+@keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.animate-dialog-in {
+  animation: dialogIn 0.3s ease-out;
+}
+
+/* Version and author animation */
+@keyframes versionSlide {
+  0%, 45% {
+    transform: translateY(0);
+  }
+  50%, 95% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes authorSlide {
+  0%, 45% {
+    transform: translateY(100%);
+  }
+  50%, 95% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-version-slide {
+  animation: versionSlide 8s ease-in-out infinite;
+}
+
+.animate-author-slide {
+  animation: authorSlide 8s ease-in-out infinite;
+}
