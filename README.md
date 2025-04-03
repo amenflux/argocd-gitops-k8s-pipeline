@@ -68,6 +68,7 @@ Additionally, the application demonstrates integration with these DevOps technol
 
 ## Project Structure
 
+```plaintext
 ├── public/
 │ ├── favicon.ico # Application favicon
 │ ├── placeholder.svg # Image placeholder
@@ -119,7 +120,7 @@ Additionally, the application demonstrates integration with these DevOps technol
 ├── vite.config.ts # Vite build configuration
 ├── tsconfig.json # TypeScript configuration
 └── package.json # Project dependencies and scripts
-
+```
 
 
 This structure organizes the application into logical sections with components, hooks, utilities, and pages separated for better maintainability. The UI components use shadcn/ui with Tailwind CSS for styling, and the application demonstrates various aspects of GitOps workflows and Kubernetes deployments through interactive visualizations and educational content.  
@@ -488,7 +489,7 @@ kubectl get pods -n webapp -w
 # Port forward to test locally
 kubectl port-forward service/webapp -n webapp 8080:80
 
-'''bash
+```
 
 # Or access through Ingress if configured
 # Verify using curl or browser: http://webapp.example.com
@@ -508,36 +509,36 @@ These configurations ensure that if your application crashes or becomes unrespon
 ## Troubleshooting Common Issues
 
 * **Pods stuck in "Pending" state**:  
-'''bash
+```bash
   kubectl describe pod [POD_NAME] -n webapp
-'''bash
+```
 . Set up secrets management using one of the demonstrated approaches
 . Configure CI/CD pipeline in GitHub Actions or other CI system
 . Push changes to your repository and watch ArgoCD deploy them
 
 ## "ImagePullBackOff" error
-'''bash
+```bash
 kubectl describe pod [POD_NAME] -n webapp
-'''bash
+```
 . Verify container registry credentials are correct
 . Check image name and tag exist in registry
 . Ensure network connectivity to registry
 . Validate any pull secrets are properly configured
 
 ## Application not accessible
-'''bash
+```bash
 kubectl get svc,ingress -n webapp
-'''bash
+```
 . Verify Service selector matches Pod labels
 . Check Ingress controller is running
 . Validate ports are correctly mapped
 . Examine network policies that might block traffic
 
 ## Container crashing repeatedly
-'''bash
+```bash
 kubectl logs [POD_NAME] -n webapp --previous
 kubectl describe pod [POD_NAME] -n webapp
-'''bash
+```
 . Check application logs for errors
 . Verify environment variables are set correctly
 . Validate resource limits aren't too restrictive
@@ -551,6 +552,6 @@ helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring
 
 ### Deploy Grafana for visualization:
 helm install grafana grafana/grafana -n monitoring
-'''bash
+```
 
 These instructions provide a simple but effective way to deploy your application on Kubernetes with automatic restart capabilities if it crashes.
