@@ -70,56 +70,56 @@ Additionally, the application demonstrates integration with these DevOps technol
 
 ```plaintext
 ├── public/
-│ ├── favicon.ico # Application favicon
-│ ├── placeholder.svg # Image placeholder
-│ └── robots.txt # Robots configuration
+│ ├── favicon.ico               # Application favicon
+│ ├── placeholder.svg           # Image placeholder
+│ └── robots.txt                # Robots configuration
 │
 ├── src/
-│ ├── components/ # Application UI Components
-│ │ ├── layout/ # Layout components
-│ │ │ └── Header.tsx # Main application header
-│ │ ├── ui/ # ShadCN UI Components
-│ │ │ ├── accordion.tsx # Accordion component
-│ │ │ ├── alert.tsx # Alert component
-│ │ │ ├── badge.tsx # Badge component
-│ │ │ ├── button.tsx # Button component
-│ │ │ ├── card.tsx # Card component
-│ │ │ ├── progress.tsx # Progress bar component
-│ │ │ ├── separator.tsx # Separator component
-│ │ │ ├── tabs.tsx # Tabs component
-│ │ │ ├── toast.tsx # Toast notification
-│ │ │ ├── tooltip.tsx # Tooltip component
-│ │ │ └── ... # Other UI components
-│ │ ├── ArgoConfig.tsx # ArgoCD configuration component
-│ │ ├── CodeBlock.tsx # Code syntax highlighting component
-│ │ ├── GitHubCloneModal.tsx # Modal for GitHub repository cloning
-│ │ ├── GitopsFlow.tsx # Main GitOps flow visualization
-│ │ ├── GitopsFlowModal.tsx # Detailed GitOps flow explanation modal
-│ │ ├── HelmChart.tsx # Helm charts explanation component
+│ ├── components/               # Application UI Components
+│ │ ├── layout/                 # Layout components
+│ │ │ └── Header.tsx            # Main application header
+│ │ ├── ui/                     # ShadCN UI Components
+│ │ │ ├── accordion.tsx         # Accordion component
+│ │ │ ├── alert.tsx             # Alert component 
+│ │ │ ├── badge.tsx             # Badge component
+│ │ │ ├── button.tsx            # Button component
+│ │ │ ├── card.tsx              # Card component
+│ │ │ ├── progress.tsx          # Progress bar component
+│ │ │ ├── separator.tsx         # Separator component
+│ │ │ ├── tabs.tsx              # Tabs component
+│ │ │ ├── toast.tsx             # Toast notification
+│ │ │ ├── tooltip.tsx           # Tooltip component
+│ │ │ └── ...                   # Other UI components
+│ │ ├── ArgoConfig.tsx          # ArgoCD configuration component
+│ │ ├── CodeBlock.tsx           # Code syntax highlighting component
+│ │ ├── GitHubCloneModal.tsx    # Modal for GitHub repository cloning
+│ │ ├── GitopsFlow.tsx          # Main GitOps flow visualization
+│ │ ├── GitopsFlowModal.tsx     # Detailed GitOps flow explanation modal
+│ │ ├── HelmChart.tsx           # Helm charts 
 │ │ ├── NodeApp.tsx # Node.js application explanation
-│ │ ├── SecretsManagement.tsx # Kubernetes secrets management component
+│ │ ├── SecretsManagement.tsx  # Kubernetes secrets management component
 │ │ ├── ThemeToggle.tsx # Dark/light mode toggle
-│ │ └── VersionDisplay.tsx # Version information display
+│ │ └── VersionDisplay.tsx     # Version information display
 │ │
-│ ├── hooks/ # Custom React hooks
-│ │ ├── use-mobile.tsx # Hook for responsive design
-│ │ └── use-toast.ts # Toast notification hook
+│ ├── hooks/                   # Custom React hooks
+│ │ ├── use-mobile.tsx         # Hook for responsive design
+│ │ └── use-toast.ts           # Toast notification hook
 │ │
-│ ├── lib/ # Utility libraries
-│ │ └── utils.ts # Helper utility functions
+│ ├── lib/                     # Utility libraries
+│ │ └── utils.ts               # Helper utility functions
 │ │
-│ ├── pages/ # Application pages
-│ │ ├── Index.tsx # Main landing page
-│ │ └── NotFound.tsx # 404 page
+│ ├── pages/                   # Application pages
+│ │ ├── Index.tsx              # Main landing page
+│ │ └── NotFound.tsx           # 404 page
 │ │
-│ ├── App.tsx # Main application component
-│ ├── index.css # Global CSS styles
-│ └── main.tsx # Application entry point
+│ ├── App.tsx                  # Main application component
+│ ├── index.css                # Global CSS styles
+│ └── main.tsx                 # Application entry point
 │
-├── tailwind.config.ts # Tailwind CSS configuration
-├── vite.config.ts # Vite build configuration
-├── tsconfig.json # TypeScript configuration
-└── package.json # Project dependencies and scripts
+├── tailwind.config.ts         # Tailwind CSS configuration
+├── vite.config.ts             # Vite build configuration
+├── tsconfig.json              # TypeScript configuration
+└── package.json               # Project dependencies and scripts
 ```
 
 
